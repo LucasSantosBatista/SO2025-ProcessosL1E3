@@ -31,7 +31,8 @@ public class DistroController {
 
 				while ((line = reader.readLine()) != null) {
 					if (line.contains("PRETTY_NAME")) {
-						System.out.println(line);
+						String[] pretty = line.split("\"");
+						System.out.println(pretty[1]);
 					}
 				}
 			} catch (IOException e) {
